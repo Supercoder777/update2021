@@ -1,117 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.9.13 on darwin)" generated="20220819 17:03:21.600" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0.1 (Python 3.8.9 on darwin)" generated="20220822 03:03:35.137" rpa="false" schemaversion="3">
 <suite id="s1" name="Hub" source="/Users/HP/PycharmProjects/Robot-Hub-task/Test/Hub.robot">
-<test id="s1-t1" name="Verify Successful login to Hub" line="13">
-<kw name="[Documentation] This test case verifies that a user is able to successfully login and logout of the Hub">
-<msg timestamp="20220819 17:03:21.737" level="FAIL">No keyword with name '[Documentation] This test case verifies that a user is able to successfully login and logout of the Hub' found.</msg>
-<status status="FAIL" starttime="20220819 17:03:21.737" endtime="20220819 17:03:21.737"/>
-</kw>
-<kw name="Opening Browser ${Site_url} ${browser}">
-<status status="NOT RUN" starttime="20220819 17:03:21.740" endtime="20220819 17:03:21.740"/>
-</kw>
-<kw name="Accept Cookies">
-<status status="NOT RUN" starttime="20220819 17:03:21.742" endtime="20220819 17:03:21.742"/>
-</kw>
-<kw name="Sign In">
-<status status="NOT RUN" starttime="20220819 17:03:21.744" endtime="20220819 17:03:21.744"/>
-</kw>
-<kw name="Input Email">
-<status status="NOT RUN" starttime="20220819 17:03:21.746" endtime="20220819 17:03:21.746"/>
-</kw>
-<kw name="Input Password" library="SeleniumLibrary">
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220819 17:03:21.746" endtime="20220819 17:03:21.746"/>
-</kw>
-<kw name="Click Login">
-<status status="NOT RUN" starttime="20220819 17:03:21.748" endtime="20220819 17:03:21.748"/>
-</kw>
-<kw name="Verify Login">
-<status status="NOT RUN" starttime="20220819 17:03:21.750" endtime="20220819 17:03:21.750"/>
-</kw>
-<kw name="Logout">
-<status status="NOT RUN" starttime="20220819 17:03:21.752" endtime="20220819 17:03:21.753"/>
-</kw>
-<tag>Smoke</tag>
-<status status="FAIL" starttime="20220819 17:03:21.735" endtime="20220819 17:03:21.753">No keyword with name '[Documentation] This test case verifies that a user is able to successfully login and logout of the Hub' found.</status>
-</test>
-<test id="s1-t2" name="Verify New space (public/private) creation" line="26">
-<kw name="[Documentation] This test case verifies that a user is able to successfully create and delete spaces in the Hub">
-<msg timestamp="20220819 17:03:21.755" level="FAIL">No keyword with name '[Documentation] This test case verifies that a user is able to successfully create and delete spaces in the Hub' found.</msg>
-<status status="FAIL" starttime="20220819 17:03:21.755" endtime="20220819 17:03:21.755"/>
-</kw>
-<kw name="[tags] Smoke">
-<status status="NOT RUN" starttime="20220819 17:03:21.758" endtime="20220819 17:03:21.758"/>
-</kw>
-<kw name="Opening Browser ${Site_url}">
+<test id="s1-t1" name="Verify Successful login to Hub" line="19">
+<kw name=" Opening Browser" library="Common">
+<arg>${Site_url}</arg>
 <arg>${browser}</arg>
-<status status="NOT RUN" starttime="20220819 17:03:21.760" endtime="20220819 17:03:21.760"/>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${site_url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220822 03:03:35.339" level="INFO">Opening browser 'Chrome' to base url 'https://hub.knime.com'.</msg>
+<status status="PASS" starttime="20220822 03:03:35.339" endtime="20220822 03:03:45.602"/>
 </kw>
-<kw name="Input Email">
-<status status="NOT RUN" starttime="20220819 17:03:21.762" endtime="20220819 17:03:21.762"/>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220822 03:03:45.603" endtime="20220822 03:03:45.896"/>
 </kw>
-<kw name="Input Password" library="SeleniumLibrary">
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220819 17:03:21.762" endtime="20220819 17:03:21.763"/>
+<status status="PASS" starttime="20220822 03:03:35.338" endtime="20220822 03:03:45.897"/>
 </kw>
-<kw name="Click Login">
-<status status="NOT RUN" starttime="20220819 17:03:21.764" endtime="20220819 17:03:21.764"/>
+<kw name=" Signin" library="Login">
+<kw name="SeleniumLibrary.Click Element|${SignInButton}">
+<msg timestamp="20220822 03:03:45.906" level="FAIL">No keyword with name 'SeleniumLibrary.Click Element|${SignInButton}' found. Did you try using keyword 'SeleniumLibrary.Click Element' and forgot to use enough whitespace between keyword and arguments?</msg>
+<status status="FAIL" starttime="20220822 03:03:45.906" endtime="20220822 03:03:45.906"/>
 </kw>
-<kw name="Verify Welcome Text is visible">
-<status status="NOT RUN" starttime="20220819 17:03:21.767" endtime="20220819 17:03:21.767"/>
+<status status="FAIL" starttime="20220822 03:03:45.897" endtime="20220822 03:03:45.909"/>
 </kw>
-<kw name="Accessing space">
-<status status="NOT RUN" starttime="20220819 17:03:21.769" endtime="20220819 17:03:21.769"/>
+<kw name=" EmailBox" library="Login">
+<status status="NOT RUN" starttime="20220822 03:03:45.909" endtime="20220822 03:03:45.909"/>
 </kw>
-<kw name="Click Spaces">
-<status status="NOT RUN" starttime="20220819 17:03:21.771" endtime="20220819 17:03:21.771"/>
+<kw name=" PassWordBox" library="Login">
+<status status="NOT RUN" starttime="20220822 03:03:45.909" endtime="20220822 03:03:45.909"/>
 </kw>
-<kw name="Space page is visible">
-<status status="NOT RUN" starttime="20220819 17:03:21.774" endtime="20220819 17:03:21.774"/>
+<kw name=" Submiton" library="Login">
+<status status="NOT RUN" starttime="20220822 03:03:45.909" endtime="20220822 03:03:45.909"/>
 </kw>
-<kw name="Click create new space (private/public)">
-<status status="NOT RUN" starttime="20220819 17:03:21.776" endtime="20220819 17:03:21.776"/>
+<kw name=" Login" library="Login">
+<status status="NOT RUN" starttime="20220822 03:03:45.909" endtime="20220822 03:03:45.909"/>
 </kw>
-<kw name="Navigate to delete space">
-<status status="NOT RUN" starttime="20220819 17:03:21.779" endtime="20220819 17:03:21.779"/>
-</kw>
-<kw name="Click delete space button">
-<status status="NOT RUN" starttime="20220819 17:03:21.781" endtime="20220819 17:03:21.781"/>
-</kw>
-<kw name="Re-enter name of selected space">
-<status status="NOT RUN" starttime="20220819 17:03:21.784" endtime="20220819 17:03:21.784"/>
-</kw>
-<kw name="Click delete button">
-<status status="NOT RUN" starttime="20220819 17:03:21.786" endtime="20220819 17:03:21.786"/>
-</kw>
-<kw name="Verify Space deleted">
-<status status="NOT RUN" starttime="20220819 17:03:21.789" endtime="20220819 17:03:21.789"/>
-</kw>
-<kw name="Logout">
-<status status="NOT RUN" starttime="20220819 17:03:21.792" endtime="20220819 17:03:21.792"/>
+<kw name=" LogOut" library="Login">
+<status status="NOT RUN" starttime="20220822 03:03:45.910" endtime="20220822 03:03:45.910"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="NOT RUN" starttime="20220819 17:03:21.792" endtime="20220819 17:03:21.792"/>
+<status status="NOT RUN" starttime="20220822 03:03:45.910" endtime="20220822 03:03:45.910"/>
 </kw>
-<status status="FAIL" starttime="20220819 17:03:21.753" endtime="20220819 17:03:21.792">No keyword with name '[Documentation] This test case verifies that a user is able to successfully create and delete spaces in the Hub' found.</status>
+<doc>This test case verifies that a user is able to successfully login and logout of the Hub</doc>
+<tag>Smoke</tag>
+<status status="FAIL" starttime="20220822 03:03:35.337" endtime="20220822 03:03:45.910">No keyword with name 'SeleniumLibrary.Click Element|${SignInButton}' found. Did you try using keyword 'SeleniumLibrary.Click Element' and forgot to use enough whitespace between keyword and arguments?</status>
 </test>
 <doc>Page Object In Robot Framework</doc>
-<status status="FAIL" starttime="20220819 17:03:21.601" endtime="20220819 17:03:21.792"/>
+<status status="FAIL" starttime="20220822 03:03:35.140" endtime="20220822 03:03:45.911"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="2" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 <stat pass="0" fail="1" skip="0">Smoke</stat>
 </tag>
 <suite>
-<stat pass="0" fail="2" skip="0" id="s1" name="Hub">Hub</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Hub">Hub</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20220819 17:03:21.734" level="ERROR">Error in file '/Users/HP/PycharmProjects/Robot-Hub-task/Test/Hub.robot' on line 4: Resource file '/Users/HP/PycharmProjects/Robot-Framework-task/Resources/PageObjects/KeywordDefinationFiles/Spaces.robot' does not exist.</msg>
-<msg timestamp="20220819 17:03:21.734" level="ERROR">Error in file '/Users/HP/PycharmProjects/Robot-Hub-task/Test/Hub.robot' on line 5: Resource file '/Users/HP/PycharmProjects/Robot-Framework-task/Resources/PageObjects/KeywordDefinationFiles/Login.robot' does not exist.</msg>
-<msg timestamp="20220819 17:03:21.734" level="ERROR">Error in file '/Users/HP/PycharmProjects/Robot-Hub-task/Test/Hub.robot' on line 6: Resource file '/Users/HP/PycharmProjects/Robot-Framework-task/Resources/PageObjects/KeywordDefinationFiles/Login.robot' does not exist.</msg>
+<msg timestamp="20220822 03:03:35.331" level="ERROR">Error in file '/Users/HP/PycharmProjects/Robot-Hub-task/Resources/PageObjects/KeywordDefinationFiles/Spaces.resource' on line 4: Invalid resource file extension '.py'. Supported extensions are '.resource', '.robot', '.txt', '.tsv', '.rst' and '.rest'.</msg>
+<msg timestamp="20220822 03:03:35.331" level="ERROR">Error in file '/Users/HP/PycharmProjects/Robot-Hub-task/Resources/PageObjects/KeywordDefinationFiles/Spaces.resource' on line 5: Invalid resource file extension '.py'. Supported extensions are '.resource', '.robot', '.txt', '.tsv', '.rst' and '.rest'.</msg>
+<msg timestamp="20220822 03:03:35.331" level="ERROR">Error in file '/Users/HP/PycharmProjects/Robot-Hub-task/Test/Hub.robot' on line 8: Invalid resource file extension '.py'. Supported extensions are '.resource', '.robot', '.txt', '.tsv', '.rst' and '.rest'.</msg>
+<msg timestamp="20220822 03:03:35.333" level="ERROR">Error in file '/Users/HP/PycharmProjects/Robot-Hub-task/Resources/PageObjects/KeywordDefinationFiles/Common.resource' on line 4: Invalid resource file extension '.py'. Supported extensions are '.resource', '.robot', '.txt', '.tsv', '.rst' and '.rest'.</msg>
+<msg timestamp="20220822 03:03:35.333" level="ERROR">Error in file '/Users/HP/PycharmProjects/Robot-Hub-task/Resources/PageObjects/KeywordDefinationFiles/Common.resource' on line 5: Invalid resource file extension '.py'. Supported extensions are '.resource', '.robot', '.txt', '.tsv', '.rst' and '.rest'.</msg>
+<msg timestamp="20220822 03:03:35.336" level="ERROR">Error in file '/Users/HP/PycharmProjects/Robot-Hub-task/Resources/PageObjects/KeywordDefinationFiles/Login.resource' on line 2: Importing library 'Seleniumlibrary' failed: ModuleNotFoundError: No module named 'Seleniumlibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  /usr/local/bin
+  /Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python38.zip
+  /Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8
+  /Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/lib-dynload
+  /Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/site-packages
+  /Library/Python/3.8/site-packages</msg>
+<msg timestamp="20220822 03:03:35.336" level="ERROR">Error in file '/Users/HP/PycharmProjects/Robot-Hub-task/Resources/PageObjects/KeywordDefinationFiles/Login.resource' on line 4: Invalid resource file extension '.py'. Supported extensions are '.resource', '.robot', '.txt', '.tsv', '.rst' and '.rest'.</msg>
+<msg timestamp="20220822 03:03:35.336" level="ERROR">Error in file '/Users/HP/PycharmProjects/Robot-Hub-task/Resources/PageObjects/KeywordDefinationFiles/Login.resource' on line 5: Invalid resource file extension '.py'. Supported extensions are '.resource', '.robot', '.txt', '.tsv', '.rst' and '.rest'.</msg>
+<msg timestamp="20220822 03:03:35.336" level="ERROR">Error in file '/Users/HP/PycharmProjects/Robot-Hub-task/Test/Hub.robot' on line 11: Invalid resource file extension '.py'. Supported extensions are '.resource', '.robot', '.txt', '.tsv', '.rst' and '.rest'.</msg>
 </errors>
 </robot>
